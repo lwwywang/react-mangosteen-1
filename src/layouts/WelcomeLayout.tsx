@@ -1,8 +1,10 @@
 import { animated, useTransition } from '@react-spring/web'
-import type { ReactNode } from 'react'
+import type { MutableRefObject, ReactNode } from 'react'
 import { useRef, useState } from 'react'
 import { Link, useLocation, useOutlet } from 'react-router-dom'
 import logo from '../assets/images/logo.svg'
+import { useSwipe } from '../hooks/useSwipe'
+
 const linkMap = {
   '/welcome/1': '/welcome/2',
   '/welcome/2': '/welcome/3',
@@ -28,6 +30,8 @@ export const WelcomeLayout: React.FC = () => {
       setExtraStyle({ position: 'relative' })
     }
   })
+  const main = useRef<HTMLElement>(null)
+  useSwipe(main)
 
   return (
     <div className="bg-#5f34bf" h-screen flex flex-col items-stretch pb-16px>
@@ -35,7 +39,7 @@ export const WelcomeLayout: React.FC = () => {
         <img src={logo} w-64px h-69px />
         <h1 text="#D4D4EE" text-32px>山竹记账</h1>
       </header>
-      <main shrink-1 grow-1 relative >
+      <main shrink-1 grow-1 relative ref={main}>
         {transitions((style, pathname) =>
           <animated.div key={pathname} style={{ ...style, ...extraStyle }} w="100%" h="100%" p-16px flex>
             <div grow-1 bg-white flex justify-center items-center rounded-8px>
@@ -51,3 +55,4 @@ export const WelcomeLayout: React.FC = () => {
     </div>
   )
 }
+
