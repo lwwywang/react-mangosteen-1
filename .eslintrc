@@ -1,6 +1,7 @@
 {
   "extends": "@antfu",
   "rules": {
+<<<<<<< HEAD
     "curly": "off",
     "@typescript-eslint/brace-style": "off",
     "@typescript-eslint/no-unused-vars": [
@@ -15,3 +16,12 @@
     "@typescript-eslint/comma-dangle": "off"
   }
 }
+=======
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "curly": "off",
+    "no-console": "off"
+  }
+}
+>>>>>>> 4b5a979a776b5e130f464b0520107a95b725325e
