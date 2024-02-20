@@ -1,51 +1,11 @@
 {
-  "name": "react-mangosteen-1",
-  "type": "module",
-  "version": "0.0.0",
-  "private": true,
+  "name": "vxszbqu",
+  "version": "1.0.0",
+  "description": "## 开发",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "dev": "vite",
-    "build": "tsc && vite build --base=/react-mangosteen-1-preview/",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@react-spring/web": "9.5.5",
-    "axios": "1.1.3",
-    "classnames": "2.3.2",
-<<<<<<< HEAD
-    "mockjs": "^1.1.0",
-=======
-    "mockjs": "1.1.0",
->>>>>>> 9987b62 (deploy)
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-router-dom": "6.4.2",
-    "sass": "1.55.0",
-    "styled-components": "5.3.6",
-    "swr": "1.3.0",
-    "zustand": "4.1.4"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "0.27.0",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "@types/styled-components": "5.1.26",
-    "@vitejs/plugin-react": "2.1.0",
-    "eslint": "8.25.0",
-<<<<<<< HEAD
-    "typescript": "4.8.4",
-    "unocss": "0.45.30",
-    "vite": "3.1.8",
-    "vite-plugin-mock": "^3.0.1"
-=======
-    "svgo": "3.0.1",
-    "svgstore": "3.0.1",
-    "typescript": "4.8.4",
-    "unocss": "0.45.30",
-    "vite": "3.1.8",
-    "vite-plugin-mock": "2.9.6"
->>>>>>> 9987b62 (deploy)
-  }
+  "author": "",
+  "license": "ISC"
 }
