@@ -9,7 +9,11 @@ import { Welcome4 } from '../pages/Welcome4'
 
 export const router = createBrowserRouter([
   { path: '/', element: <Root />, },
+<<<<<<< HEAD
   { path: '/home', element: <Home /> },
+=======
+  { path: '/home', element: <Home title="首页" /> },
+>>>>>>> 9987b62 (deploy)
   {
     path: '/welcome',
     element: <WelcomeLayout />,

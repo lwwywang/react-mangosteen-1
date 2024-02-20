@@ -2,11 +2,15 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
+<<<<<<< HEAD
     "lib": [
       "DOM",
       "DOM.Iterable",
       "ESNext"
     ],
+=======
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+>>>>>>> 9987b62 (deploy)
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -20,6 +24,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+<<<<<<< HEAD
   "include": [
     "src",
     "mock"
@@ -30,3 +35,8 @@
     }
   ]
 }
+=======
+  "include": ["src", "mock"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+>>>>>>> 9987b62 (deploy)

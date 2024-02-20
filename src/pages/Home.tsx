@@ -1,10 +1,24 @@
 import useSWR from 'swr'
+<<<<<<< HEAD
 import p from '../assets/images/pig.svg'
 import add from '../assets/icons/add.svg'
 import { ajax } from '../lib/ajax'
 import { Navigate } from 'react-router-dom'
 
 export const Home: React.FC = () => {
+=======
+import { Navigate } from 'react-router-dom'
+import p from '../assets/images/pig.svg'
+import { ajax } from '../lib/ajax'
+import { useTitle } from '../hooks/useTitle'
+import { Loading } from '../components/Loading'
+import { AddItemFloatButton } from '../components/AddItemFloatButton'
+interface Props {
+  title?: string
+}
+export const Home: React.FC<Props> = (props) => {
+  useTitle(props.title)
+>>>>>>> 9987b62 (deploy)
   const { data: meData, error: meError } = useSWR('/api/v1/me', async path =>
     (await ajax.get<Resource<User>>(path)).data.resource
   )
@@ -16,13 +30,21 @@ export const Home: React.FC = () => {
   const isLoadingItems = meData && !itemsData && !itemsError
 
   if (isLoadingMe || isLoadingItems) {
+<<<<<<< HEAD
     return <div>加载中……</div>
+=======
+    return <Loading className="h-screen" />
+>>>>>>> 9987b62 (deploy)
   }
 
   if (itemsData?.resources[0]) {
     return <Navigate to="/items" />
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 9987b62 (deploy)
   return <div>
     <div flex justify-center items-center>
       <img mt-20vh mb-20vh width="128" height="130" src={p} />
@@ -32,9 +54,14 @@ export const Home: React.FC = () => {
         rounded-8px
       >开始记账</button>
     </div>
+<<<<<<< HEAD
     <button p-4px w-56px h-56px bg="#5C33BE" rounded="50%" b-none text-white
       text-6xl fixed bottom-16px right-16px>
       <img src={add} max-w="100%" max-h="100%" />
     </button>
   </div>
+=======
+    <AddItemFloatButton />
+  </div >
+>>>>>>> 9987b62 (deploy)
 }
