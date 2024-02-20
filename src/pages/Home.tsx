@@ -4,6 +4,10 @@ import p from '../assets/images/pig.svg'
 import add from '../assets/icons/add.svg'
 import { ajax } from '../lib/ajax'
 import { useTitle } from '../hooks/useTitle'
+import { Loading } from '../components/Loading'
+import { AddItemFloatButton } from '../components/AddItemFloatButton'
+
+
 interface Props {
   title?: string
 }
@@ -20,7 +24,7 @@ export const Home: React.FC<Props> = (props) => {
   const isLoadingItems = meData && !itemsData && !itemsError
 
   if (isLoadingMe || isLoadingItems) {
-    return <div>加载中……</div>
+    return <Loading />
   }
 
   if (itemsData?.resources[0]) {
@@ -40,5 +44,6 @@ export const Home: React.FC<Props> = (props) => {
       text-6xl fixed bottom-16px right-16px>
       <img src={add} max-w="100%" max-h="100%" />
     </button>
+    <AddItemFloatButton />
   </div >
 }
